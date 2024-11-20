@@ -1,0 +1,292 @@
+// Медіа-запит для планшетів (max-width: 768px)
+@media (max-width: 768px)
+  // Hero секція
+  .hero
+    height: 400px
+
+  .hero__title
+    font-size: 1.25rem
+
+  .hero__subtitle
+    font-size: 1.5rem
+
+  .hero__button
+    padding: 0.75rem 1.5rem
+
+  // Intro секція
+  .intro__text
+    font-size: 1.5rem
+
+  .intro__buttons a
+    padding: 0.75rem 1.5rem
+
+  // Products секція
+  .products__grid
+    grid-template-columns: repeat(2, 1fr)
+
+  // Footer секція
+  .footer__container
+    flex-direction: column
+    align-items: center
+
+  .footer__links
+    flex-direction: column
+    gap: 1rem
+
+  .footer__social
+    flex-direction: column
+    gap: 1rem
+  // Kinn Moments секція
+  .kinn-moments
+    padding: 2rem 0
+
+  .kinn-moments__title
+    font-size: 1.25rem
+
+  .kinn-moments__gallery
+    flex-wrap: wrap
+    justify-content: center
+
+  .kinn-moments__image
+    width: 120px
+    height: 120px
+
+// Медіа-запит для телефонів (max-width: 480px)
+@media (max-width: 480px)
+  // Hero секція
+  .hero
+    height: 300px
+
+  .hero__title
+    font-size: 1rem
+
+  .hero__subtitle
+    font-size: 1.25rem
+
+  .hero__button
+    padding: 0.5rem 1rem
+
+  // Intro секція
+  .intro__text
+    font-size: 1.25rem
+
+  .intro__buttons a
+    padding: 0.5rem 1rem
+
+  // Products секція
+  .products__grid
+    grid-template-columns: 1fr
+
+  // Footer секція
+  .footer__container
+    flex-direction: column
+    align-items: center
+
+  .footer__links
+    flex-direction: column
+    gap: 1rem
+
+  .footer__social
+    flex-direction: column
+    gap: 1rem
+
+  // Navbar
+  .navbar
+    flex-direction: column
+    align-items: center
+
+  .navbar__menu
+    display: block
+    gap: 1rem
+
+  .navbar__icons
+    display: block
+    gap: 1rem
+
+  .navbar__item
+    font-size: 1rem
+
+  .navbar__logo
+    width: 50px
+    height: auto
+// Kinn Moments секція
+  .kinn-moments
+    padding: 1.5rem 0
+
+  .kinn-moments__title
+    font-size: 1.1rem
+
+  .kinn-moments__gallery
+    flex-wrap: wrap
+    justify-content: center
+
+  .kinn-moments__image
+    width: 100px
+    height: 100px
+
+// Медіа-запит для дуже маленьких екранів (max-width: 360px)
+@media (max-width: 360px)
+  // Hero секція
+  .hero
+    height: 250px
+
+  .hero__title
+    font-size: 0.9rem
+
+  .hero__subtitle
+    font-size: 1.1rem
+
+  .hero__button
+    padding: 0.5rem 0.8rem
+
+  // Intro секція
+  .intro__text
+    font-size: 1.1rem
+
+  .intro__buttons a
+    padding: 0.5rem 0.8rem
+
+  // Products секція
+  .products__grid
+    grid-template-columns: 1fr
+    gap: 1.5rem
+
+  .product-card
+    padding: 0.5rem
+
+  .product-card__info
+    padding: 0.5rem
+
+  .product-card h4
+    font-size: 1.1rem
+
+  .product-card p
+    font-size: 0.9rem
+
+  // Footer секція
+  .footer__container
+    flex-direction: column
+    align-items: center
+    text-align: center
+
+  .footer__links
+    flex-direction: column
+    gap: 0.5rem
+
+  .footer__social
+    flex-direction: column
+    gap: 0.5rem
+  // Kinn Moments секція
+  .kinn-moments
+    padding: 1rem 0
+
+  .kinn-moments__title
+    font-size: 1rem
+
+  .kinn-moments__gallery
+    flex-wrap: wrap
+    justify-content: center
+
+  .kinn-moments__image
+    width: 80px
+    height: 80px
+
+// Hero Section адаптив
+@media (max-width: 768px)
+  .hero
+    height: 400px
+
+  .hero__title
+    font-size: 1.25rem
+
+  .hero__subtitle
+    font-size: 1.5rem
+
+  .hero__button
+    padding: 0.75rem 1.5rem
+
+@media (max-width: 480px)
+  .hero
+    height: 300px
+
+  .hero__title
+    font-size: 1rem
+
+  .hero__subtitle
+    font-size: 1.25rem
+
+  .hero__button
+    padding: 0.5rem 1rem
+
+@media (max-width: 360px)
+  .hero
+    height: 250px
+
+  .hero__title
+    font-size: 0.9rem
+
+  .hero__subtitle
+    font-size: 1.1rem
+
+  .hero__button
+    padding: 0.5rem 0.8rem
+
+// Intro Section адаптив
+@media (max-width: 768px)
+  .intro__text
+    font-size: 1.5rem
+
+  .intro__buttons a
+    padding: 0.75rem 1.5rem
+
+@media (max-width: 480px)
+  .intro__text
+    font-size: 1.25rem
+
+  .intro__buttons a
+    padding: 0.5rem 1rem
+
+@media (max-width: 360px)
+  .intro__text
+    font-size: 1.1rem
+
+  .intro__buttons a
+    padding: 0.5rem 0.8rem
+
+// Products Section адаптив
+@media (max-width: 768px)
+  .products__grid
+    grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 480px)
+  .products__grid
+    grid-template-columns: 1fr
+
+  .product-card
+    padding: 0.5rem
+
+  .product-card__info
+    padding: 0.5rem
+
+  .product-card h4
+    font-size: 1.1rem
+
+  .product-card p
+    font-size: 0.9rem
+
+@media (max-width: 360px)
+  .products__grid
+    grid-template-columns: 1fr
+    gap: 1.5rem
+
+  .product-card
+    padding: 0.5rem
+
+  .product-card__info
+    padding: 0.5rem
+
+  .product-card h4
+    font-size: 1.1rem
+
+  .product-card p
+    font-size: 0.9rem
