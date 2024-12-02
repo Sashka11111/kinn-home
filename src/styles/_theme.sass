@@ -1,0 +1,25 @@
+// Змінні теми
+$background-light: #ffffff
+$text-light: #000000
+
+$background-dark: #333333
+$text-dark: #ffffff
+
+// Стандартні змінні
+$background: $background-light
+$text: $text-light
+
+// Міксін для тем
+=theme($background, $text)
+  background-color: $background
+  color: $text
+
+// Базовий стиль (світла тема за замовчуванням)
+body
+  +theme($background, $text)
+  transition: background-color 0.3s, color 0.3s
+
+// Темна тема
+body.dark-theme
+  +theme($background-dark, $text-dark)
+

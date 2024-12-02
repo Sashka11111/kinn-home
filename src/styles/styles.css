@@ -270,6 +270,88 @@
     font-size: 0.9rem;
   }
 }
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.navbar__menu {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .navbar__menu {
+    display: none;
+  }
+}
+.navbar__item {
+  padding: 10px 20px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.navbar__item:last-child {
+  border-bottom: none;
+}
+.navbar__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+.navbar__burger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.navbar__burger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.navbar__burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar__burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+@media (max-width: 768px) {
+  .navbar__burger {
+    display: flex;
+  }
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .navbar__menu.active {
+    display: flex;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -278,7 +360,6 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #56593d;
 }
 
 .container {
@@ -287,9 +368,20 @@ body {
 }
 
 .header {
-  background-color: #fff;
   padding: 1rem 0;
   border-bottom: 1px solid #ddd;
+}
+.header .header-link {
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #8DA7BE;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 .header .navbar {
   display: flex;
@@ -324,7 +416,6 @@ body {
   position: relative;
   text-align: center;
   height: 500px;
-  background-color: #f9f9f9;
 }
 .hero .hero__content {
   position: relative;
@@ -370,14 +461,12 @@ body {
 }
 
 .intro {
-  background-color: #fff;
   padding: 3rem 0;
   text-align: center;
 }
 .intro .intro__text {
   font-size: 1.75rem;
   line-height: 1.4;
-  color: #333;
   margin-bottom: 2rem;
 }
 .intro .intro__buttons a {
@@ -396,14 +485,12 @@ body {
 }
 
 .products {
-  background-color: #fff;
   padding: 3rem 0;
 }
 .products .products__title {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2rem;
-  color: #333;
 }
 .products .products__grid {
   display: grid;
@@ -411,7 +498,6 @@ body {
   gap: 2rem;
 }
 .products .products__grid .product-card {
-  background-color: #f8f8f8;
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
@@ -427,7 +513,6 @@ body {
 .products .products__grid .product-card .product-card__info h4 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  color: #333;
 }
 .products .products__grid .product-card .product-card__info p {
   font-size: 1rem;
@@ -441,7 +526,6 @@ body {
 .essentials .essentials__title {
   font-size: 1rem;
   text-transform: uppercase;
-  color: #333;
   letter-spacing: 2px;
   margin-bottom: 1rem;
 }
@@ -458,7 +542,6 @@ body {
 }
 
 .design-story {
-  background-color: #fefbf5;
   padding: 4rem 0;
 }
 .design-story .container {
@@ -480,7 +563,6 @@ body {
 }
 .design-story .container .design-story__text .design-story__title {
   font-size: 1.5rem;
-  color: #333;
   margin-bottom: 1rem;
 }
 .design-story .container .design-story__text .design-story__divider {
@@ -496,7 +578,6 @@ body {
 }
 
 .your-table-your-time {
-  background-color: #f9f9f9;
   padding: 4rem 0;
 }
 .your-table-your-time .grid {
@@ -514,7 +595,6 @@ body {
 }
 .your-table-your-time .grid .your-table-your-time__text .your-table-your-time__title {
   font-size: 1.5rem;
-  color: #333;
   margin-bottom: 1rem;
 }
 .your-table-your-time .grid .your-table-your-time__text .your-table-your-time__description {
@@ -533,7 +613,6 @@ body {
 }
 
 .newsletter {
-  background-color: #fff;
   padding: 2rem 0;
   text-align: center;
   color: #56593d;
@@ -575,13 +654,11 @@ body {
 }
 
 .kinn-moments {
-  background-color: #f9f9f9;
   padding: 2rem 0;
   text-align: center;
 }
 .kinn-moments .kinn-moments__title {
   font-size: 1.5rem;
-  color: #333;
   margin-bottom: 1rem;
 }
 .kinn-moments .kinn-moments__gallery {

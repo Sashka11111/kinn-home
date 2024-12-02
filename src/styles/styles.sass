@@ -1,21 +1,22 @@
-@import responsive
+@use 'responsive'
+@use 'theme'
+@use 'burger-menu'
 
 // Змінні
 $font-family: 'Roboto', sans-serif
 $text-color: #56593d
-$bg-color: #f8f5f0
 $button-color: #637b47
 $button-hover-color: #546b3b
-$heading-color: #4a4a4a
 $line-color: #ddd
 $white-color: #fff
 $light-grey: #f8f8f8
 $padding-base: 1rem
 $padding-large: 2rem
 $padding-xlarge: 3rem
-$bg-color: #f9f9f9
-$heading-color: #333
 $white-color: #fff
+$primary-color: #8DA7BE
+$font-color: #fff
+$transition-speed: 0.3s
 
 // Скидання стилів
 *
@@ -25,16 +26,27 @@ $white-color: #fff
 
 body
   font-family: $font-family
-  color: $text-color
 
 .container
   width: 90%
   margin: 0 auto
 // Header
 .header
-  background-color: $white-color
   padding: $padding-base 0
   border-bottom: 1px solid $line-color
+
+  .header-link
+    display: inline-block
+    margin: 0 1rem
+    padding: 0.5rem 1rem
+    text-decoration: none
+    font-size: 1.2rem
+    font-weight: 500
+    color: $font-color
+    background-color: $primary-color
+    border-radius: 5px
+    transition: background-color $transition-speed, color $transition-speed, transform $transition-speed
+
 
   .navbar
     display: flex
@@ -69,7 +81,6 @@ body
   position: relative
   text-align: center
   height: 500px
-  background-color: $bg-color
 
   .hero__content
     position: relative
@@ -113,14 +124,12 @@ body
           background-color: $button-hover-color
 // Intro section
 .intro
-  background-color: #fff
   padding: $padding-xlarge 0
   text-align: center
 
   .intro__text
     font-size: 1.75rem
     line-height: 1.4
-    color: $heading-color
     margin-bottom: 2rem
 
   .intro__buttons a
@@ -139,14 +148,12 @@ body
 
 // Products section
 .products
-  background-color: #fff
   padding: $padding-xlarge 0
 
   .products__title
     font-size: 2rem
     text-align: center
     margin-bottom: 2rem
-    color: $heading-color
 
   .products__grid
     display: grid
@@ -154,7 +161,6 @@ body
     gap: 2rem
 
     .product-card
-      background-color: $light-grey
       border-radius: 8px
       overflow: hidden
       text-align: center
@@ -170,8 +176,6 @@ body
         h4
           font-size: 1.25rem
           margin-bottom: 0.5rem
-          color: $heading-color
-
         p
           font-size: 1rem
           color: $button-color
@@ -184,7 +188,6 @@ body
   .essentials__title
     font-size: 1rem
     text-transform: uppercase
-    color: $heading-color
     letter-spacing: 2px
     margin-bottom: 1rem
 
@@ -200,7 +203,6 @@ body
     border-radius: 8px
 // Секція "Design Story"
 .design-story
-  background-color: #fefbf5 // Світлий фон, як на зображенні
   padding: 4rem 0
 
   .container
@@ -221,7 +223,6 @@ body
 
       .design-story__title
         font-size: 1.5rem
-        color: $heading-color
         margin-bottom: 1rem
 
       .design-story__divider
@@ -237,7 +238,6 @@ body
 
 // Секція "Your Table Your Time"
 .your-table-your-time
-  background-color: $bg-color
   padding: 4rem 0
 
   .grid
@@ -255,7 +255,6 @@ body
 
       .your-table-your-time__title
         font-size: 1.5rem
-        color: $heading-color
         margin-bottom: 1rem
 
       .your-table-your-time__description
@@ -275,7 +274,6 @@ body
 
 // Секція "Newsletter"
 .newsletter
-  background-color: $white-color
   padding: 2rem 0
   text-align: center
   color: $text-color
@@ -317,13 +315,11 @@ body
 
 // Секція "Kinn Moments"
 .kinn-moments
-  background-color: $bg-color
   padding: 2rem 0
   text-align: center
 
   .kinn-moments__title
     font-size: 1.5rem
-    color: $heading-color
     margin-bottom: 1rem
 
   .kinn-moments__gallery
