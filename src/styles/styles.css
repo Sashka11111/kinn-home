@@ -302,10 +302,6 @@ body.dark-theme {
 .navbar__item {
   padding: 10px 20px;
   text-align: center;
-  border-bottom: 1px solid #ccc;
-}
-.navbar__item:last-child {
-  border-bottom: none;
 }
 .navbar__burger {
   display: none;
@@ -369,7 +365,6 @@ body {
 
 .header {
   padding: 1rem 0;
-  border-bottom: 1px solid #ddd;
 }
 .header .header-link {
   display: inline-block;
@@ -378,10 +373,8 @@ body {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
-  color: #fff;
-  background-color: #8DA7BE;
+  color: #56593d;
   border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 .header .navbar {
   display: flex;
